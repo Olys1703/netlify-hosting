@@ -1,0 +1,31 @@
+.header {
+  padding-top: 44px;
+  position: relative;
+  z-index: 2;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+  }
+  &__logo {
+    margin-left: 8%;
+    font-size: rem(24);
+    font-weight: 800;
+  }
+  &__nav {
+   width: 35%;
+   @media (max-width: $smDesktopWidth) {
+    display: none;
+  }
+  }
+  &__login {
+    width: 123px;
+    height: 37px;
+    margin-right: 93px;
+  }
+  &__slider {
+    //margin-top: 103px;
+  }
+}

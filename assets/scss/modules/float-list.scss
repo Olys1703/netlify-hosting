@@ -1,0 +1,113 @@
+.float-list {
+  position: relative;
+  display: flex;
+  padding-right: 90px;
+  padding-left: 90px;
+  //justify-content: space-between;
+  background-color: #fbfbfb;
+  align-items: stretch;
+  flex-wrap: wrap;
+  &__item {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    //flex-direction: column;
+    //align-items: center;
+    &:not(:first-child)::before {
+      content: '';
+      position: relative;
+      width: 3px;
+      height: 134px;
+      background-color: #cdcdcd;
+      opacity: 0.5;
+      top: calc(50% - 67px);
+    }
+    &:hover {
+      
+        //width: 258px;
+        &::before {
+          display: none;
+        }
+        transform: scale(1.08);
+        
+        z-index: 2;
+        border-radius: 10px;
+        filter: drop-shadow(0 0 10px rgba(0,0,0,0.15));
+        background-color: #ffffff;
+        .float-list__content {
+          transform: scale(.926);
+          
+        }
+        .float-list__link {
+          position: absolute;
+          bottom: -22px;
+          display: block;
+          width: 175px;
+          height: 40px;
+          border-radius: 5px;
+          background-color: rgb(57,193,215);
+          text-align: center;
+          line-height: 40px;
+          color: #ffffff;
+        }
+        .float-list__main-text {
+          position: relative;
+          color: #39c2d7;
+          //transform: translateY(-20px);
+          animation: float-main-text 0.2s linear forwards;
+          @keyframes float-main-text {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(-40px);
+            }
+          }
+
+        }
+        .float-list__add-text {
+          position: relative;
+          color: #39c2d7;
+          animation: float-add-text 0.2s linear forwards;
+          @keyframes float-add-text {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(-35px);
+            }
+          }
+        }
+    }
+  }
+  &__content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+  }
+  &__description {
+    
+  }
+  &__main-text {
+    //text-align: center;
+    font-size: rem(72);
+    color: #777777;
+    font-weight: 800;
+    line-height: 94px;
+  }
+  &__add-text {
+    //text-align: center;
+    
+    font-size: rem(20);
+    color: #777777;
+    font-weight: 400;
+  }
+  &__link {
+    //margin: auto;
+    display: none;
+  }
+  
+}
